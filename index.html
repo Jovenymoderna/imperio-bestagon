@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio Bestagon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>⚔️ Imperio Bestagon ⚔️</h1>
+        <p>"Por la gloria de la Emperatriz y el Emperador"</p>
+    </header>
+    
+    <section id="historia">
+        <h2>📜 Historia del Imperio Bestagon</h2>
+        <p>Aquí se incluirá el texto extraído de las Crónicas del Imperio Bestagon.</p>
+    </section>
+    
+    <section id="padres-fundadores">
+        <h2>👑 Padres Fundadores</h2>
+        <p><strong>Emperatriz Lucía:</strong> Energía incombustible, jugadora de PlayStation (solo plataformas), amante del Real Madrid.</p>
+        <p><strong>Emperador David:</strong> Contrabandista de croquetas, esquiador, copiloto oficial, optimista del tiempo, devoto de la IA.</p>
+        <p>🚲 <em>Vehículo oficial del Imperio:</em> La noble bicicleta.</p>
+    </section>
+    
+    <section id="moneda-imperial">
+        <h2>💰 Moneda Imperial: PuffCoin</h2>
+        <p>Aquí se incluirá el whitepaper de la moneda y los gráficos.</p>
+    </section>
+    
+    <section id="mapa">
+        <h2>🗺️ Mapa del Imperio</h2>
+        <p>Lista de lugares conquistados y por conquistar.</p>
+    </section>
+    
+    <section id="contadores">
+        <h2>📆 Contadores Imperiales</h2>
+        <p><strong>Días desde la Fundación:</strong> <span id="contador-dias"></span></p>
+        <p><strong>Cafés consumidos:</strong> <span id="contador-cafes"></span></p>
+    </section>
+    
+    <section id="himno">
+        <h2>🎶 Himno del Imperio</h2>
+        <button onclick="playHimno()">▶️ Reproducir Himno</button>
+        <audio id="himno-audio" src="imperio-the-chance.mp3"></audio>
+    </section>
+    
+    <section id="saludos">
+        <h2>🌍 Saludos Matutinos Imperiales</h2>
+        <p>Aquí aparecerá el saludo del día en una lengua ficticia.</p>
+    </section>
+    
+    <script>
+        function playHimno() {
+            document.getElementById("himno-audio").play();
+        }
+
+        // Contadores dinámicos
+        function calcularDias() {
+            const inicio = new Date("2024-04-15");
+            const hoy = new Date();
+            const diferencia = Math.floor((hoy - inicio) / (1000 * 60 * 60 * 24));
+            document.getElementById("contador-dias").innerText = diferencia;
+        }
+        
+        function calcularCafes() {
+            const inicio = new Date("2024-04-15");
+            const hoy = new Date();
+            const diferencia = Math.floor((hoy - inicio) / (1000 * 60 * 60 * 24));
+            document.getElementById("contador-cafes").innerText = diferencia * 4;
+        }
+        
+        calcularDias();
+        calcularCafes();
+    </script>
+</body>
+</html>

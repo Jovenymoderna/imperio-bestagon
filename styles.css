@@ -1,0 +1,48 @@
+/* Estilos para la web del Imperio Bestagon */
+body {
+    font-family: "Garamond", serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8b0000;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+section {
+    margin: 30px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+h1, h2 {
+    color: #ffd700;
+}
+
+button {
+    background-color: #8b0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #a52a2a;
+}
+
+#contador-dias, #contador-cafes {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffd700;
+}
