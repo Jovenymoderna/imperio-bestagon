@@ -5,90 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperio Bestagon</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para las pestañas */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f1f1f1;
+            border-bottom: 2px solid #ccc;
+            margin-top: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .tab-button:hover {
+            background-color: #bbb;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .active-tab {
+            display: block;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        p, ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>⚔️ Imperio Bestagon ⚔️</h1>
+        <h1>Imperio Bestagon</h1>
         <p>"Por la gloria de la Emperatriz y el Emperador"</p>
+        <!-- Incluir el escudo en la cabecera -->
+        <img src="Escudo imperio.webp" alt="Escudo del Imperio Bestagon" width="200">
     </header>
-    
-    <section id="historia">
-        <h2>📜 Historia del Imperio Bestagon</h2>
-        <p>Aquí se incluirá el texto extraído de las Crónicas del Imperio Bestagon.</p>
-    </section>
-    
-    <section id="padres-fundadores">
-        <h2>👑 Padres Fundadores</h2>
-        <p><strong>Emperatriz Lucía:</strong> Energía incombustible, jugadora de PlayStation (solo plataformas), amante del Real Madrid.</p>
-        <p><strong>Emperador David:</strong> Contrabandista de croquetas, esquiador, copiloto oficial, optimista del tiempo, devoto de la IA.</p>
-        <p>🚲 <em>Vehículo oficial del Imperio:</em> La noble bicicleta.</p>
-    </section>
-    
-    <section id="moneda-imperial">
-        <h2>💰 Moneda Imperial: PuffCoin</h2>
-        <p>Aquí se incluirá el whitepaper de la moneda y los gráficos.</p>
-    </section>
-    
-    <section id="whitepaper">
-        <h2>📄 Whitepaper de la Moneda</h2>
-        <a href="ruta/del/whitepaper.pdf" target="_blank">Descargar el Whitepaper</a>
-    </section>
-    
-    <section id="escudo">
-        <h2>🛡️ Escudo Imperial</h2>
-        <img src="escudo.png" alt="Escudo Imperial" width="200">
-    </section>
-    
-    <section id="graficos">
-        <h2>📊 Gráficos de la Moneda</h2>
-        <img src="grafico1.png" alt="Gráfico de la Moneda" width="400">
-        <img src="grafico2.png" alt="Gráfico de la Moneda" width="400">
-    </section>
-    
-    <section id="mapa">
-        <h2>🗺️ Mapa del Imperio</h2>
-        <p>Lista de lugares conquistados y por conquistar.</p>
-    </section>
-    
-    <section id="contadores">
-        <h2>📆 Contadores Imperiales</h2>
+
+    <!-- Pestañas de navegación -->
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('historia')">Historia</button>
+        <button class="tab-button" onclick="openTab('padres')">Padres Fundadores</button>
+        <button class="tab-button" onclick="openTab('economia')">Economía</button>
+        <button class="tab-button" onclick="openTab('mapa')">Mapa</button>
+        <button class="tab-button" onclick="openTab('contadores')">Contadores</button>
+        <button class="tab-button" onclick="openTab('himno')">Himno</button>
+        <button class="tab-button" onclick="openTab('saludos')">Saludos</button>
+    </div>
+
+    <!-- Contenido de las pestañas -->
+    <div id="historia" class="tab-content">
+        <h2>Historia del Imperio Bestagon</h2>
+        <p>En el año del Señor de 2024, como si la historia se repitiera cual espejo del pasado, dos nobles herederos de los antiguos reinos de Salamanca y Zaragoza, <strong>Doña Lucía la Buceadora</strong> y <strong>Don David el Gimnasta</strong>, se encontraron en las festividades de la Feria de Abril en el Reino de Sevilla, tal como antaño hicieran Isabel y Fernando.</p>
+        <p>No fue en un torneo de justas donde sus miradas se cruzaron, sino entre rebujitos y sevillanas, donde estos dos herederos decidieron unir sus destinos y fundar el más próspero de los imperios: el <strong>Imperio Bestagon</strong>.</p>
+    </div>
+
+    <div id="padres" class="tab-content">
+        <h2>Padres Fundadores</h2>
+        <p><strong>Emperatriz Lucía "La Princesita de la RAE"</strong></p>
+        <ul>
+            <li><strong>Energía incombustible</strong>, su vitalidad es objeto de estudio en los laboratorios del Imperio.</li>
+            <li><strong>Jugadora de PlayStation</strong>, pero exclusivamente de juegos de plataformas.</li>
+            <li><strong>Devota del Real Madrid</strong>, capaz de recitar alineaciones desde tiempos inmemoriales.</li>
+        </ul>
+
+        <p><strong>Emperador David "El Padre de Morfeo"</strong></p>
+        <ul>
+            <li><strong>Contrabandista de croquetas</strong>, experto en el comercio ilícito de este manjar, producido por la Matriarca Suprema del Imperio.</li>
+            <li><strong>Esquiador profesional</strong>, aunque algunos dudan si lo suyo es esquiar o simplemente caerse con elegancia.</li>
+            <li><strong>Mejor copiloto del Imperio</strong>, pues prefiere confiar en las habilidades de otros.</li>
+            <li><strong>Loco de la IA</strong>, se cree profeta de las máquinas.</li>
+        </ul>
+    </div>
+
+    <div id="economia" class="tab-content">
+        <h2>Economía del Imperio: Puffcoin</h2>
+        <p><strong>El Origen de Puffcoin:</strong></p>
+        <p>La creación de Puffcoin fue, en su naturaleza más profunda, un accidente feliz... (continúa el texto aquí)</p>
+    </div>
+
+    <div id="mapa" class="tab-content">
+        <h2>Mapa del Imperio</h2>
+        <p>En esta sección estará el mapa del Imperio con los territorios conquistados.</p>
+    </div>
+
+    <div id="contadores" class="tab-content">
+        <h2>Contadores Imperiales</h2>
         <p><strong>Días desde la Fundación:</strong> <span id="contador-dias"></span></p>
         <p><strong>Cafés consumidos:</strong> <span id="contador-cafes"></span></p>
-    </section>
-    
-    <section id="himno">
-        <h2>🎶 Himno del Imperio</h2>
+    </div>
+
+    <div id="himno" class="tab-content">
+        <h2>Himno del Imperio</h2>
         <button onclick="playHimno()">▶️ Reproducir Himno</button>
         <audio id="himno-audio" src="imperio-the-chance.mp3"></audio>
-    </section>
-    
-    <section id="saludos">
-        <h2>🌍 Saludos Matutinos Imperiales</h2>
+    </div>
+
+    <div id="saludos" class="tab-content">
+        <h2>Saludos Matutinos Imperiales</h2>
         <p>Aquí aparecerá el saludo del día en una lengua ficticia.</p>
-    </section>
-    
+    </div>
+
     <script>
-        function playHimno() {
-            document.getElementById("himno-audio").play();
+        function openTab(tabId) {
+            // Oculta todas las pestañas
+            let tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+            // Muestra la pestaña seleccionada
+            document.getElementById(tabId).classList.add('active-tab');
         }
 
-        // Contadores dinámicos
-        function calcularDias() {
-            const inicio = new Date("2024-04-15");
-            const hoy = new Date();
-            const diferencia = Math.floor((hoy - inicio) / (1000 * 60 * 60 * 24));
-            document.getElementById("contador-dias").innerText = diferencia;
-        }
-        
-        function calcularCafes() {
-            const inicio = new Date("2024-04-15");
-            const hoy = new Date();
-            const diferencia = Math.floor((hoy - inicio) / (1000 * 60 * 60 * 24));
-            document.getElementById("contador-cafes").innerText = diferencia * 4;
-        }
-        
-        calcularDias();
-        calcularCafes();
+        // Inicializa la primera pestaña visible
+        openTab('historia');
     </script>
 </body>
 </html>

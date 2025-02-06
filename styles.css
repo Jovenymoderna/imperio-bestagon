@@ -1,48 +1,27 @@
-/* Estilos para la web del Imperio Bestagon */
+/* Establece un fondo blanco y texto negro */
 body {
-    font-family: "Garamond", serif;
-    background-color: #1a1a1a;
-    color: #f5f5f5;
-    text-align: center;
+    background-color: white; /* Fondo blanco */
+    color: black; /* Letras negras */
+    font-family: 'Arial', sans-serif; /* Usar Arial como fuente sans-serif */
+    font-weight: 300; /* Peso fino de la fuente */
     margin: 0;
     padding: 0;
+    line-height: 1.15; /* Interlineado de 1.15 */
 }
 
-header {
-    background-color: #8b0000;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-section {
-    margin: 30px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-
+/* Estilo para las secciones: en negrita, mayúsculas y más grandes */
 h1, h2 {
-    color: #ffd700;
-}
-
-button {
-    background-color: #8b0000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #a52a2a;
-}
-
-#contador-dias, #contador-cafes {
     font-weight: bold;
-    font-size: 20px;
-    color: #ffd700;
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    font-size: 40px; /* Tamaño grande para las secciones */
+    text-align: center; /* Centrado de títulos */
+    margin-top: 50px;
+}
+
+/* Estilo para el texto normal (párrafos) */
+p {
+    font-size: 18px;
+    margin: 20px;
+    line-height: 1.6;
+    text-align: justify; /* Justificar texto */
 }
