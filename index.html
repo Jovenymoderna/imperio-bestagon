@@ -6,47 +6,61 @@
     <title>Imperio Bestagon</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos generales */
+        /* Estilos para las pestañas */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f1f1f1;
+            border-bottom: 2px solid #ccc;
+            margin-top: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .tab-button:hover {
+            background-color: #bbb;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .active-tab {
+            display: block;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 20px;
         }
 
-        /* Cabecera */
-        header {
-            text-align: center;
-            margin-bottom: 20px;
+        p, ul {
+            font-size: 16px;
+            line-height: 1.6;
         }
 
-        header p {
-            font-weight: bold; /* Negrita */
-            font-size: 18px;
-        }
-
-        /* Estilo para las secciones */
-        section {
-            margin: 20px;
-            text-align: justify; /* Justificar texto */
-        }
-
-        h1, h2 {
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* Listas */
         ul {
             margin-top: 10px;
         }
 
         strong {
             font-weight: bold;
-        }
-
-        /* Sección de Himno */
-        #himno {
-            margin-top: 30px;
-            font-size: 16px;
         }
     </style>
 </head>
@@ -227,6 +241,18 @@ Change, change, change
         function playHimno() {
             document.getElementById("himno-audio").play();
         }
+    <script>
+        function openTab(tabId) {
+            // Oculta todas las pestañas
+            let tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+            // Muestra la pestaña seleccionada
+            document.getElementById(tabId).classList.add('active-tab');
+        }
+
+        // Inicializa la primera pestaña visible
+        openTab('historia');
     </script>
 </body>
 </html>
