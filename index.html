@@ -8,7 +8,7 @@
     <style>
         /* Estilos generales */
         body {
-            font-family: 'Candara Light;
+            font-family: 'Candara Light';
             margin: 20px;
         }
 
@@ -55,15 +55,58 @@
 
         /* Estilo para las secciones de contenido */
         .content {
-            display: none;
+             display: none;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
         /* Mostrar el contenido activo */
         .active-content {
             display: block;
         }
+ .counter-box {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .counter {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Estilo para el himno */
+        #himno p {
+            font-size: 16px;
+            font-weight: normal;
+            white-space: pre-line; /* Para que respete los saltos de línea */
+        }
     </style>
 </head>
+<script>
+    function showContent(contentId) {
+        // Ocultar todas las secciones de contenido
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => content.classList.remove('active-content'));
+
+        // Quitar la clase 'active' de todas las pestañas
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Mostrar la sección correspondiente y agregar la clase 'active' a la pestaña
+        const activeContent = document.getElementById(contentId);
+        activeContent.classList.add('active-content');
+        
+        const activeTab = document.querySelector(`.tab[onclick="showContent('${contentId}')"]`);
+        activeTab.classList.add('active');
+    }
+</script>
+
 <body>
     <header>
         <h1> El Imperio Bestagon</h1>
@@ -438,7 +481,7 @@
 
     <script>
         // Función para calcular los días y los cafés consumidos
-        function actualizarContadores() {
+        ffunction actualizarContadores() {
             const fechaInicio = new Date("2024-04-15"); // Fecha de inicio
             const fechaHoy = new Date(); // Fecha actual
 
@@ -448,14 +491,17 @@
             // Calcular los cafés consumidos (4 cafés por día)
             const cafesConsumidos = diferenciaDias * 4;
 
-            // Actualizar el contenido de los contadores en la página
+            // Actualizar los contadores en la página
             document.getElementById("contador-dias").innerText = diferenciaDias;
-            document.getEle
+            document.getElementById("contador-cafes").innerText = cafesConsumidos;
+        }
 
-
+ showContent('historia');
+        actualizarContadores();
+    </script>
     <section id="himno" class="content">
         <h2>Himno del Imperio</h2>
-        <pre>No, no tú no eres cualquiera
+        <p>No, no tú no eres cualquiera
 No, no tú no eres cualquiera
 
 Besos y ternuras
@@ -510,7 +556,7 @@ Yo no tengo apuros (yo no tengo apuros)
 
 No, no
 The change
-Change, change, change</pre>
+Change, change, change<p>
     </section>
 
     <section id="saludos" class="content">
