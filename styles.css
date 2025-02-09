@@ -1,27 +1,172 @@
-/* Establece un fondo blanco y texto negro */
-body {
-    background-color: white; /* Fondo blanco */
-    color: black; /* Letras negras */
-    font-family: 'Arial', sans-serif; /* Usar Arial como fuente sans-serif */
-    font-weight: 300; /* Peso fino de la fuente */
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.15; /* Interlineado de 1.15 */
+    box-sizing: border-box;
 }
 
-/* Estilo para las secciones: en negrita, mayúsculas y más grandes */
-h1, h2 {
-    font-weight: bold;
-    text-transform: uppercase; /* Convertir texto a mayúsculas */
-    font-size: 40px; /* Tamaño grande para las secciones */
-    text-align: center; /* Centrado de títulos */
-    margin-top: 50px;
+body {
+    font-family: 'Calibri Light', 'Calibri', sans-serif;
+    line-height: 1.15;
+    color: #333;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Estilo para el texto normal (párrafos) */
+/* Navegación con pestañas */
+.nav-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.nav-tabs .tab {
+    padding: 12px 24px;
+    background: #fff;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold; /* Añadido negrita a las pestañas */
+}
+
+.nav-tabs .tab:hover {
+    color: #000;
+    background: #f5f5f5;
+}
+
+.nav-tabs .tab.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Contenedores de sección */
+.section {
+    padding: 20px 0;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
 p {
-    font-size: 18px;
-    margin: 20px;
-    line-height: 1.6;
-    text-align: justify; /* Justificar texto */
+    margin-bottom: 15px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.15;
 }
+
+/* Enlaces */
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+a:hover {
+    border-bottom-color: #000;
+}
+
+/* Botones */
+button {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Calibri Light', 'Calibri', sans-serif;
+}
+
+button:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Espaciado y contenedores */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.spacing {
+    margin-bottom: 40px;
+}
+
+/* Cards para la demo */
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-tabs">
+            <a href="#" class="tab active">Inicio</a>
+            <a href="#" class="tab">Servicios</a>
+            <a href="#" class="tab">Portfolio</a>
+            <a href="#" class="tab">Contacto</a>
+        </div>
+
+        <div class="section">
+            <h1>Diseño Minimalista</h1>
+            <p>Este es un ejemplo de cómo se ve el diseño minimalista en blanco y negro con la fuente Calibri Light. El texto está justificado y los márgenes son más estrechos para una mejor experiencia de lectura. Las pestañas de navegación ahora están en negrita para mayor énfasis visual.</p>
+            
+            <div class="spacing">
+                <h2>Características</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Diseño Limpio</h3>
+                        <p>Interfaz minimalista centrada en el contenido. El diseño limpio permite una mejor concentración en la información importante. La simplicidad es la máxima sofisticación.</p>
+                        <button>Leer más</button>
+                    </div>
+                    <div class="card">
+                        <h3>Tipografía</h3>
+                        <p>Uso de Calibri Light para mejor legibilidad. La elección de la tipografía es fundamental para garantizar una experiencia de lectura óptima en todos los dispositivos.</p>
+                        <button>Leer más</button>
+                    </div>
+                    <div class="card">
+                        <h3>Responsive</h3>
+                        <p>Se adapta a todos los dispositivos. El diseño responsive garantiza que el contenido se vea correctamente en cualquier tamaño de pantalla, desde móviles hasta escritorio.</p>
+                        <button>Leer más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
