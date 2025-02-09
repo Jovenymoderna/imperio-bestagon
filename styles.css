@@ -14,19 +14,20 @@ body {
     line-height: 1.15;
     color: #333;
     background-color: #fff;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navegación con pestañas */
+/* Navegación con pestañas - Ahora a todo el ancho */
 .nav-tabs {
     display: flex;
     border-bottom: 1px solid #ddd;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .nav-tabs .tab {
+    flex: 1; /* Hace que cada pestaña ocupe el mismo espacio */
     padding: 12px 24px;
     background: #fff;
     border: none;
@@ -35,7 +36,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    font-weight: bold; /* Añadido negrita a las pestañas */
+    font-weight: bold;
+    /* Centrado vertical y horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px; /* Altura fija para las pestañas */
 }
 
 .nav-tabs .tab:hover {
@@ -51,6 +57,13 @@ body {
 /* Contenedores de sección */
 .section {
     padding: 20px 0;
+}
+
+/* Contenedor estrecho para el contenido */
+.content-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Tipografía */
@@ -108,12 +121,6 @@ button:hover {
     color: #fff;
 }
 
-/* Espaciado y contenedores */
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
 .spacing {
     margin-bottom: 40px;
 }
@@ -134,17 +141,17 @@ button:hover {
 </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav-tabs">
-            <a href="#" class="tab active">Inicio</a>
-            <a href="#" class="tab">Servicios</a>
-            <a href="#" class="tab">Portfolio</a>
-            <a href="#" class="tab">Contacto</a>
-        </div>
+    <div class="nav-tabs">
+        <a href="#" class="tab active">Inicio</a>
+        <a href="#" class="tab">Servicios</a>
+        <a href="#" class="tab">Portfolio</a>
+        <a href="#" class="tab">Contacto</a>
+    </div>
 
+    <div class="content-container">
         <div class="section">
             <h1>Diseño Minimalista</h1>
-            <p>Este es un ejemplo de cómo se ve el diseño minimalista en blanco y negro con la fuente Calibri Light. El texto está justificado y los márgenes son más estrechos para una mejor experiencia de lectura. Las pestañas de navegación ahora están en negrita para mayor énfasis visual.</p>
+            <p>Este es un ejemplo de cómo se ve el diseño minimalista en blanco y negro con la fuente Calibri Light. El texto está justificado y los márgenes son más estrechos para una mejor experiencia de lectura. Las pestañas de navegación ahora ocupan todo el ancho de la página y están perfectamente centradas.</p>
             
             <div class="spacing">
                 <h2>Características</h2>
