@@ -146,6 +146,15 @@ button:hover {
     text-align: center; /* Centra el texto */
 }
 
+/*Himno*/
+#himno p {
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    font-weight: normal; /* Asegura que el texto no esté en negrita */
+    line-height: 1.6; /* Espaciado entre líneas para facilitar la lectura */
+    white-space: pre-line; /* Respetar los saltos de línea */
+    margin-bottom: 20px; /* Espacio en la parte inferior */
+}
+
 </style>
 </head>
 <body>
