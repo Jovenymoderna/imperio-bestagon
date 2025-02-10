@@ -138,6 +138,14 @@ button:hover {
     gap: 20px;
     margin-top: 20px;
 }
+
+/*Titulo imperio*/
+.titulo-imperio {
+    font-size: 4rem; /* Ajusta el tamaño del texto a 4 veces el tamaño base */
+    font-weight: bold; /* Hace que el texto esté en negrita */
+    text-align: center; /* Centra el texto */
+}
+
 </style>
 </head>
 <body>
